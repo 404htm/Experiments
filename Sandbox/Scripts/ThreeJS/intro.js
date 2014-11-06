@@ -10,7 +10,7 @@
 	var point = new THREE.PointLight(0x0000ff, 1, 100);
 	var dir = new THREE.DirectionalLight();
 	var camera;
-	var sphere, sphere2;
+	var sphere, sphere2, sphere3, dod;
 	var box;
 	var pivot;
 	var manualGeo;
@@ -18,6 +18,7 @@
 	function initScene() {
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		renderer.shadowMapEnabled = true;
+		renderer.shadowMapType = THREE.PCFSoftShadowMap;
 
 		document.getElementById("webgl-container").appendChild(renderer.domElement);
 
@@ -71,6 +72,12 @@
 			reflectivity: 40
 		});
 
+		var trans = new THREE.MeshLambertMaterial({
+			transparent: true,
+			opacity: .3,
+			color: 0xcc0000
+		})
+
 		sphere = new THREE.Mesh(
 			//new THREE.BoxGeometry(20, 20, 20),
 			new THREE.SphereGeometry(10, 40, 40),
@@ -79,25 +86,45 @@
 			);
 
 		sphere.castShadow = true;
+		sphere.receiveShadow = true;
 
 		pivot = new THREE.Object3D();
 
 		sphere2 = new THREE.Mesh(
-			new THREE.SphereGeometry(5, 30, 30),
+			new THREE.SphereGeometry(8, 30, 30),
 			texture2
 		);
 
 		sphere2.castShadow = true;
+
+		sphere3 = new THREE.Mesh(
+			new THREE.SphereGeometry(4, 30, 30),
+			trans
+		);
+
+
+
+		sphere.add(sphere3);
+		sphere3.position.x = -25;
+		sphere3.position.y = 2;
+		sphere3.castShadow = true;
 		//pivot.add(sphere2);
+
+		dod =
+			new THREE.Mesh(
+			new THREE.DodecahedronGeometry(3.5, 0),
+			phong);
+
+		sphere3.add(dod);
 
 		scene.add(sphere);
 		sphere.add(sphere2);
-		sphere2.position.x = 20;
+		sphere2.position.x = 60;
 
 		//scene.add(sphere2);
 
 
-		sphere2.applyMatrix(new THREE.Matrix4().makeTranslation(25, 0, 0));
+		//sphere2.applyMatrix(new THREE.Matrix4().makeTranslation(25, 0, 0));
 
 		box = new THREE.Mesh(
 			new THREE.BoxGeometry(2,2,2),
@@ -105,7 +132,7 @@
 		)
 
 		box.castShadow = true;
-		box.position.x = 7;
+		box.position.x = 15;
 		//box.position.x = 20;
 		//scene.add(box);
 		sphere2.add(box);
@@ -140,7 +167,7 @@
 	}
 
 	function render() {
-		box.rotation.x += 0.1;
+		box.rotation.x += 0.01;
 		//,box.position.z += .01;
 		//box.position.y += .01;
 
@@ -149,6 +176,8 @@
 
 		sphere.rotation.y += .01;
 		sphere2.rotation.y += .02;
+		sphere2.rotation.x += .001;
+		dod.rotation.x += .01;
 
 		//point.position.z += .03;
 
