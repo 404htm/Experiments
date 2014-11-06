@@ -134,6 +134,37 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\textures\README.txt" />
+    <Content Include="Content\textures\seamlesstexture10_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture11_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture12_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture13_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture14_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture15_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture16_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture17_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture18_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture19_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture1_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture20_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture21_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture22_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture23_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture24_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture25_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture26_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture27_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture28_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture29_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture2_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture30_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture3_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture4_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture5_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture6_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture7_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture8_500.jpg" />
+    <Content Include="Content\textures\seamlesstexture9_500.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
